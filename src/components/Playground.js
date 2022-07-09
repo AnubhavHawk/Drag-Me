@@ -1,5 +1,7 @@
 import React from "react";
+import Dockmenu from "./Dockmenu";
 import DraggableCard from "./DraggableCard";
+// import Navbar from "./Navbar";
 
 class Playground extends React.Component {
     constructor(props) {
@@ -14,11 +16,9 @@ class Playground extends React.Component {
         position: "fixed",
         left: "50%",
         bottom: "5%",
-        boxShadow: "0 0 10px 1px #858585",
+        boxShadow: "-8px 7px 17px 2px #858585",
         transform: "translateX(-50%)"
     };
-    
-    // boundary = this.playground.current.classList
 
     componentDidMount(){
         this.calculateBoundary(this.playground.current)
@@ -35,8 +35,10 @@ class Playground extends React.Component {
     render() {
         return (
             <div className="playground" ref={this.playground}>
+                {/* <Navbar /> */}
                 <DraggableCard boundary={this.state.boundary} />
-                <button className="btn btn-primary font-bold rounded-circle" style={this.buttonStyle}>+</button>   
+                <Dockmenu />
+                {/* <button className="btn btn-primary font-bold rounded-circle" style={this.buttonStyle}>+</button>    */}
             </div>
         );
     }

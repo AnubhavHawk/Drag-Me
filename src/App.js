@@ -1,4 +1,3 @@
-import 'bootstrap';
 import './App.css';
 import Navbar from './components/Navbar';
 import Playground from './components/Playground';
@@ -6,7 +5,7 @@ import Playground from './components/Playground';
 function App() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Playground />
     </div>
   );
