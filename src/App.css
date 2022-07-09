@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Heebo:wght@200&family=Lato:ital,wght@1,100&family=Noto+Sans&display=swap');
+body, html {
+  overflow: hidden!important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  height: 10vh!important;
+  z-index: 2;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav kbd {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #21c3df;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.playground {
+  height: 90vh;
+  width: 100%;
+  border: 10px solid #e5e5e5;
+  overflow: hidden;
+  position: absolute;
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, #21c3df 1px, transparent 1px),
+    linear-gradient(to bottom, #21c3df 1px, transparent 1px);
+}
+.draggable {
+  width: 4%;
+  display: inline-block!important;
+  position: absolute;
+  margin: 2px;
+}
+.my-card-header {
+  padding: 5px;
+  /* background-color: #525252; */
+  background-color: #333333;
   color: white;
+  cursor: grab;
+  /* font-family: Helvetica; */
+  /* font-family: 'Caveat', cursive; */
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  min-height: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.grabbing {
+  cursor: -moz-grabbing!important;
+  cursor: -webkit-grabbing!important;
+  cursor: grabbing!important;
+  box-shadow: -5px 5px 12px 1px #5e5e5e!important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.my-card-body {
+  padding: 5px;
+  /* background-color: gray; */
+  background-color: #dfe1e5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
 }
